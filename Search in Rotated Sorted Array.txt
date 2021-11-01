@@ -1,4 +1,9 @@
 #JavaScript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
 var search = function (nums, target) {
     
     // Special case
@@ -8,20 +13,17 @@ var search = function (nums, target) {
     
     let left = 0;
     let right = nums.length - 1;
-    // First step is to find the pivot where the
-    // array is rotated
+    // cibler pivot de rotation bach t3raf fin t9lab
+    
     while (left < right) {
         // Middle pointer
         let middle = left + parseInt((right - left) / 2);
-        // If the element at the mid is greater than
-        // the element at the right then we can say that
-        // the array is rotated after middle index
+        
         if (nums[middle] > nums[right]) {
-            left = middle + 1;
+            left = middle + 1; // akhir valeur b9at hna hiya pivot
         }
-        // Else, the pivot is in the left part
         else {
-            right = middle;
+            right = middle; // rja3 lor rak khliti pivot wra lmiddle
         }
     }
     // After the above loop is completed, then the
@@ -29,8 +31,7 @@ var search = function (nums, target) {
     const pivot = left;
     left = 0;
     right = nums.length - 1;
-    // Now we will find in which half of the array,
-    // our target is present
+    // wjad les bornes a tbi
     if (target >= nums[pivot] && target <= nums[right]) {
         left = pivot;
     } else {
