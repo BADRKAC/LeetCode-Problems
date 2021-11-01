@@ -6,7 +6,6 @@ var search = function (nums, target) {
         return -1;
     }
     
-    // Left and right pointers in the array
     let left = 0;
     let right = nums.length - 1;
     // First step is to find the pivot where the
