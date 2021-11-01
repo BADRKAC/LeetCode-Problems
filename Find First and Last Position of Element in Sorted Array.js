@@ -1,3 +1,4 @@
+#JavaScript
 var searchRange = function (nums, target) {
     return [findFirstOccurrence(nums, target), findLastOccurrence(nums, target)];
 };
@@ -52,3 +53,5 @@ var searchRange = function (nums, target) {
      
      return lastOccurrence;
  }
+___________________________________________________________________________________________________________
+#Java
