@@ -21,9 +21,10 @@ if (right == 0) return left;
         
     }
     
-    return left;
+    return left // or right;
     
 };
 
+algorithme explanation : https://www.youtube.com/watch?v=L7gNay1c4ak
 _____________________________________________________________________________________________________________
 #Java
