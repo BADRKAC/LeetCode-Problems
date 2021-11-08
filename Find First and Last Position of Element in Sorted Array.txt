@@ -11,7 +11,7 @@ var searchRange = function (nums, target) {
      
      while (left <= right) {
         
-         let middle = left + right-left//2;
+         let middle = left + parseInt((right - left) / 2);
          
          if(target == nums[middle])
          {
