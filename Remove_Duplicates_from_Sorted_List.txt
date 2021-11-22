@@ -1,1 +1,26 @@
+#JavaScript
+var dummy = new ListNode(0),
+        duplicate = null,
+        node;
+    
+    dummy.next = head;
+    node = head;
+    prev = dummy;
+    
+    while (node && node.next) {
+        if (node.val === duplicate || node.val === node.next.val) {
+            duplicate = node.val;
+            prev.next = node.next;
+        } else {
+            prev = prev.next;
+        }
 
+        node = node.next;
+    }
+    
+    if (node && node.val === duplicate) {
+        prev.next = null;
+    }
+    
+    return dummy.next;
+};
